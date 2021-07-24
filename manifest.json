@@ -1,0 +1,24 @@
+{
+  "name": "chrome-cli",
+  "description": "chrome-cli project",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "cookies",
+    "contextMenus",
+    "notifications"
+  ],
+  "icons": {
+    "16": "./assets/images/chrome_16.png",
+    "48": "./assets/images/chrome_48.png",
+    "128": "./assets/images/chrome_128.png"
+  },
+  "browser_action": {
+    "default_title": "chrome-cli project",
+    "default_popup": "./pages/popup/index.html"
+  },
+  "background": {
+    "page": "./pages/background/index.html"
+  }
+}
