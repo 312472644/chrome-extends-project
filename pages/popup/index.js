@@ -30,7 +30,31 @@ let popup = {
           });
         }
       });
+    });
+    $("#btn_get_cookie").bind("click", () => {
+      const webUrl = $("#input_url").val().trim();
+      chromeCookie.getAllCookie({ url: webUrl }, (cookie) => {
+        console.log('cookie', cookie);
+      });
+      chromeCookie.setCookie({ url: webUrl, name: 'chrome-cookie', value: 'chrome-cookie' });
+      chromeCookie.removeCookie({ url: webUrl, name: 'chrome-cookie' })
+    });
+    $("#btn_visible_tab").bind("click", () => {
+      chromeTab.captureVisibleTab();
+    });
+    $("#btn_create_tab").bind("click", () => {
+      chromeTab.createTab({
+        windowId: null,
+        url: 'https://www.baidu.com/',
+        selected: false
+      }, (tabs) => {
+        console.log('tabs', tabs);
+      })
     })
+    chromeCookie.cookieChangeEvent((remove, cookie) => {
+      console.log('remove', remove);
+      console.log('cookie', cookie);
+    });
   }
 };
 

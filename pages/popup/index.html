@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../assets/styles/chrome.css" rel="stylesheet" />
+    <script src="../../libs/jquery.js"></script>
+    <script src="../../utils/chrome_menu.js"></script>
+    <script src="../../utils/chrome_cookie.js"></script>
+    <script src="../../utils/chrome_tab.js"></script>
+    <script src="index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../../assets/styles/chrome.css" rel="stylesheet" />
-  <script src="../../libs/jquery.js"></script>
-  <script src="../../utils/chrome_menu.js"></script>
-  <script src="index.js"></script>
-</head>
-
-<body>
-  <div class="popup-container">
-    <button type="button" class="ant-btn" id="btn_create_menu">创建右键菜单</button>
-    <button type="button" class="ant-btn" id="btn_delete_menu">删除右键菜单</button>
-  </div>
-</body>
-
+  <body>
+    <div class="popup-container">
+      <input
+        type="text"
+        class="ant-input"
+        placeholder="input url"
+        id="input_url"
+        value="http://chrome.cenchy.com/cookies.html"
+      />
+      <div class="ant-row">
+        <button type="button" class="ant-btn" id="btn_create_menu">
+          创建右键菜单
+        </button>
+        <button type="button" class="ant-btn" id="btn_delete_menu">
+          删除右键菜单
+        </button>
+        <button type="button" class="ant-btn" id="btn_get_cookie">
+          获取cookie
+        </button>
+        <button type="button" class="ant-btn" id="btn_visible_tab">
+          获取可视区域
+        </button>
+        <button type="button" class="ant-btn" id="btn_create_tab">
+          创建选项卡
+        </button>
+      </div>
+    </div>
+  </body>
 </html>

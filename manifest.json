@@ -1,11 +1,14 @@
 {
   "name": "chrome-cli",
-  "description": "chrome-cli project",
+  "description": "创建chrome插件的脚手架",
   "version": "1.0",
   "manifest_version": 2,
   "permissions": [
     "tabs",
+    "activeTab",
     "cookies",
+    "<all_urls>",
+    "*://*/*",
     "contextMenus",
     "notifications"
   ],
@@ -20,5 +23,14 @@
   },
   "background": {
     "page": "./pages/background/index.html"
-  }
+  },
+  "options_page": "./pages/options/index.html",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["./libs/jquery.js", "./inject/index.js"],
+      "css": ["./assets/styles/chrome.css"],
+      "run_at": "document_start"
+    }
+  ]
 }
