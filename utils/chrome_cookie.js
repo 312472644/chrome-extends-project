@@ -14,7 +14,7 @@ const chromeCookie = {
      * 获取指定网址所有cookie信息
      *
      * @param {string} [details={ url = '', name = '' }]
-     * @param {*} callback
+     * @param {*} callback cookie对象
      * @return {*} 
      */
     getAllCookie(details, callback) {

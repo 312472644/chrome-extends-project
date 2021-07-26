@@ -4,5 +4,4 @@ let background = {
 };
 
 $(function () {
- 
 });
