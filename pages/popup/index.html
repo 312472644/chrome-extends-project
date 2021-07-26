@@ -9,6 +9,7 @@
     <script src="../../utils/chrome_menu.js"></script>
     <script src="../../utils/chrome_cookie.js"></script>
     <script src="../../utils/chrome_tab.js"></script>
+    <script src="../../utils/chrome_window.js"></script>
     <script src="index.js"></script>
   </head>
 
@@ -22,21 +23,51 @@
         value="http://chrome.cenchy.com/cookies.html"
       />
       <div class="ant-row">
-        <button type="button" class="ant-btn" id="btn_create_menu">
-          创建右键菜单
-        </button>
-        <button type="button" class="ant-btn" id="btn_delete_menu">
-          删除右键菜单
-        </button>
-        <button type="button" class="ant-btn" id="btn_get_cookie">
-          获取cookie
-        </button>
-        <button type="button" class="ant-btn" id="btn_visible_tab">
-          获取可视区域
-        </button>
-        <button type="button" class="ant-btn" id="btn_create_tab">
-          创建选项卡
-        </button>
+        <div class="ant-card">
+          <div class="ant-card-head">
+            <div class="ant-card-head-title">创建</div>
+          </div>
+          <div class="ant-card-body">
+            <button type="button" class="ant-btn" id="btn_create_menu">
+              创建右键菜单
+            </button>
+            <button type="button" class="ant-btn" id="btn_create_tab">
+              创建选项卡
+            </button>
+            <button type="button" class="ant-btn" id="btn_execute_scripts">
+             创建注入脚本
+            </button>
+            <button type="button" class="ant-btn" id="btn_create_window">
+              创建窗口
+            </button>
+          </div>
+        </div>
+        <div class="ant-card">
+          <div class="ant-card-head">
+            <div class="ant-card-head-title">获取信息</div>
+          </div>
+          <div class="ant-card-body">
+            <button type="button" class="ant-btn" id="btn_get_cookie">
+              获取cookie
+            </button>
+            <button type="button" class="ant-btn" id="btn_visible_tab">
+              获取可视区域
+            </button>
+            <button type="button" class="ant-btn" id="btn_get_all_tabs">
+              获取当前窗口所有tabs
+            </button>
+          </div>
+        </div>
+        <div class="ant-card">
+          <div class="ant-card-head">
+            <div class="ant-card-head-title">其他</div>
+          </div>
+          <div class="ant-card-body">
+            <button type="button" class="ant-btn" id="btn_delete_menu">
+              发送桌面消息
+            </button> 
+          </div>
+        </div> 
       </div>
     </div>
   </body>

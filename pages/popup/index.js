@@ -5,6 +5,22 @@ let popup = {
    */
   initPage() {
     this.bindEvent();
+    this.triggerEvent();
+  },
+  /**
+   * 事件监听
+   *
+   */
+  triggerEvent() {
+    chromeCookie.cookieChangeEvent((remove, cookie) => {
+      console.log('cookie', cookie);
+    });
+    chromeTab.removeTabEvent((tabId, removeInfo) => {
+      console.log('removeInfo', removeInfo);
+    });
+    chromeTab.selectTabChangeEvent((tabId, selectInfo) => {
+      console.log('tabId', tabId);
+    });
   },
   /**
    * 事件绑定
@@ -17,11 +33,13 @@ let popup = {
       });
       chromeMenu.createChromeMenu({
         parentId: this.menuId,
-        title: '自定义菜单-1'
+        title: '自定义菜单-1',
+        onclick() {
+          chromeMenu.removeChromeAllMenu()
+        }
       });
     })
     $("#btn_delete_menu").bind("click", () => {
-      // chromeMenu.removeChromeAllMenu();
       Notification.requestPermission().then(function (permission) {
         // 如果用户接受权限，我们就可以发起一条消息
         if (permission === "granted") {
@@ -50,10 +68,24 @@ let popup = {
       }, (tabs) => {
         console.log('tabs', tabs);
       })
-    })
-    chromeCookie.cookieChangeEvent((remove, cookie) => {
-      console.log('remove', remove);
-      console.log('cookie', cookie);
+    });
+    $("#btn_execute_scripts").bind("click", () => {
+      chromeTab.executeScriptOrCss(null, { code: 'body{background:red}' }, 'css');
+    });
+    $('#btn_get_all_tabs').bind("click", () => {
+      chromeTab.getAllInTabs(null, (tabs) => {
+        tabs.forEach(element => {
+          const { active, id } = element;
+          if (!active) {
+            chromeTab.removeTab(id);
+          }
+        });
+      });
+    });
+    $("#btn_create_window").bind("click", () => {
+      chromeWindow.createWindow({ url: 'https://www.baidu.com/' }, (window) => {
+        console.log('window', window);
+      });
     });
   }
 };

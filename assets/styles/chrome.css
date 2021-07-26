@@ -5,6 +5,8 @@ body {
 }
 
 .ant-btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
   line-height: 1.5715;
   position: relative;
   display: inline-block;
@@ -26,15 +28,6 @@ body {
   border-color: #d9d9d9;
 }
 
-.ant-btn + .ant-btn {
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
-.ant-btn:nth-of-type(5n) {
-  margin-left: 0;
-}
-
 .ant-btn:active,
 .ant-btn:hover {
   color: #096dd9;
@@ -52,7 +45,7 @@ body {
 
 .popup-container {
   width: 500px;
-  padding: 10px;
+  padding: 12px;
 }
 
 .ant-input {
@@ -82,4 +75,25 @@ body {
 
 .ant-row {
   margin-top: 10px;
+}
+
+.ant-card-head {
+  margin-bottom: -1px;
+  color: #666;
+  font-weight: 500;
+  font-size: 16px;
+  background: 0 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-card-head-title {
+  display: inline-block;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ant-card-body {
+  padding-top: 12px;
 }

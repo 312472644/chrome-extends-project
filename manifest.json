@@ -27,9 +27,16 @@
   "options_page": "./pages/options/index.html",
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["./libs/jquery.js", "./inject/index.js"],
-      "css": ["./assets/styles/chrome.css"],
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "./libs/jquery.js",
+        "./inject/index.js"
+      ],
+      "css": [
+        "./assets/styles/chrome.css"
+      ],
       "run_at": "document_start"
     }
   ]
