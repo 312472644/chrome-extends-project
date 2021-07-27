@@ -13,5 +13,6 @@ const inject = {
 };
 
 $(function () {
-    inject.initPage();
+    // inject.initPage();
+    // console.log('inject success');
 });
