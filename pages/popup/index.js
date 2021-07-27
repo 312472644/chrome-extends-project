@@ -52,8 +52,9 @@ let popup = {
     // 生成列
     dataList.forEach(item => {
       tbodyHtml += `<tr>`;
-      columnList.forEach(column => {
-        tbodyHtml += `<td>${item[column.name]}</td>`;
+      columnList.forEach((column, index) => {
+        const value = item[column.name];
+        tbodyHtml += `<td class=${index === columnList.length - 1 ? 'ellipsis' : ''} title=${value}>${value}</td>`;
       });
       tbodyHtml += `</tr>`;
     })
