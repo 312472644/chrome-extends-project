@@ -32,6 +32,7 @@
       ],
       "js": [
         "./libs/jquery.js",
+        "./inject/block_advertisement.js",
         "./inject/index.js"
       ],
       "css": [

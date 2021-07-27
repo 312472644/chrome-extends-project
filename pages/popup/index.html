@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../../assets/styles/chrome.css" rel="stylesheet" />
     <script src="../../libs/jquery.js"></script>
-    <script src="../../utils/chrome_menu.js"></script>
-    <script src="../../utils/chrome_cookie.js"></script>
-    <script src="../../utils/chrome_tab.js"></script>
-    <script src="../../utils/chrome_window.js"></script>
+    <script src="../../libs/chrome_utils.min.js"></script>
     <script src="index.js"></script>
   </head>
 
   <body>
     <div class="popup-container">
-      <input
-        type="text"
-        class="ant-input"
-        placeholder="input url"
-        id="input_url"
-        value="http://chrome.cenchy.com/cookies.html"
-      />
+      <input type="text" class="ant-input" placeholder="input url" id="input_url"/>
+      <div class="ant-row hide" id="ant_alert">
+        <div class="ant-alert-success">
+          <div class="ant-alert-content">
+            <span class="ant-alert-message">Success Text</span>
+          </div>
+        </div>
+      </div>
       <div class="ant-row">
         <div class="ant-card">
           <div class="ant-card-head">
@@ -33,9 +31,6 @@
             </button>
             <button type="button" class="ant-btn" id="btn_create_tab">
               创建选项卡
-            </button>
-            <button type="button" class="ant-btn" id="btn_execute_scripts">
-             创建注入脚本
             </button>
             <button type="button" class="ant-btn" id="btn_create_window">
               创建窗口
@@ -50,9 +45,6 @@
             <button type="button" class="ant-btn" id="btn_get_cookie">
               获取cookie
             </button>
-            <button type="button" class="ant-btn" id="btn_visible_tab">
-              获取可视区域
-            </button>
             <button type="button" class="ant-btn" id="btn_get_all_tabs">
               获取当前窗口所有tabs
             </button>
@@ -66,9 +58,13 @@
             <button type="button" class="ant-btn" id="btn_delete_menu">
               发送桌面消息
             </button> 
+            <button type="button" class="ant-btn" id="btn_visible_tab">
+              屏幕截图
+            </button>
           </div>
         </div> 
       </div>
+      <div class="ant-row hide" id="table"></div>
     </div>
   </body>
 </html>

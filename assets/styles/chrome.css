@@ -97,3 +97,46 @@ body {
 .ant-card-body {
   padding-top: 12px;
 }
+
+.ant-alert-success {
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 2px;
+  padding: 8px 15px;
+}
+
+.ant-alert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ant-alert-message {
+  color: #000000d9;
+  font-size: 14px;
+}
+
+.hide {
+  display: none;
+}
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.cookie-table thead {
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.cookie-table td {
+  padding: 8px 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
