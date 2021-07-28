@@ -135,8 +135,12 @@ body {
   border: 1px solid #f0f0f0;
 }
 
-.ellipsis{
+.ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.no-record {
+  text-align: center;
 }

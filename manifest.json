@@ -1,12 +1,13 @@
 {
-  "name": "chrome-cli",
-  "description": "创建chrome插件的脚手架",
+  "name": "chrome-extends-project",
+  "description": "chrome-extends-project",
   "version": "1.0",
   "manifest_version": 2,
   "permissions": [
     "tabs",
     "activeTab",
     "cookies",
+    "storage",
     "<all_urls>",
     "*://*/*",
     "contextMenus",
@@ -18,7 +19,7 @@
     "128": "./assets/images/chrome_128.png"
   },
   "browser_action": {
-    "default_title": "chrome-cli project",
+    "default_title": "chrome-extends-project",
     "default_popup": "./pages/popup/index.html"
   },
   "background": {

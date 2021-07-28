@@ -16,7 +16,7 @@
       <div class="ant-row hide" id="ant_alert">
         <div class="ant-alert-success">
           <div class="ant-alert-content">
-            <span class="ant-alert-message">Success Text</span>
+            <span class="ant-alert-message">操作成功</span>
           </div>
         </div>
       </div>
@@ -52,18 +52,38 @@
         </div>
         <div class="ant-card">
           <div class="ant-card-head">
+            <div class="ant-card-head-title">设置</div>
+          </div>
+          <div class="ant-card-body">
+            <button type="button" class="ant-btn" id="btn_set_storage">
+              设置storage
+            </button>
+            <button type="button" class="ant-btn" id="btn_clear_cookie">
+              清除缓存
+            </button>
+          </div>
+        </div>
+        <div class="ant-card">
+          <div class="ant-card-head">
             <div class="ant-card-head-title">其他</div>
           </div>
           <div class="ant-card-body">
-            <button type="button" class="ant-btn" id="btn_delete_menu">
+            <button type="button" class="ant-btn" id="btn_send_notification">
               发送桌面消息
             </button> 
             <button type="button" class="ant-btn" id="btn_visible_tab">
               屏幕截图
             </button>
+            <button type="button" class="ant-btn" id="btn_other_tab">
+              关闭其他选项卡
+            </button>
+            <button type="button" class="ant-btn" id="btn_send_message">
+              消息推送
+            </button>
           </div>
         </div> 
       </div>
+      <!--表格信息展示-->
       <div class="ant-row hide" id="table"></div>
     </div>
   </body>
